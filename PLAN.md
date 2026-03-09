@@ -90,6 +90,6 @@ Remove Svelte entirely. Convert Svelte components to Astro components. Fetch dat
 
 - The Flask server (`server/app.py`) is unchanged (logic-wise)
 - `API_SERVER_URL` env var moves from middleware to a shared constant used by Astro pages
-- The `Header.astro` component with its vanilla JS menu toggle is fine as-is
+- The `Header.astro` component now uses an always-visible navigation without JavaScript; no further changes are required for this plan
 - E2e tests should pass since rendered HTML output is equivalent
 - This eliminates the entire Svelte framework from the dependency tree
