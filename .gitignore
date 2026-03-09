@@ -45,3 +45,6 @@ app/client/playwright-report/
 
 # e2e test database
 app/server/e2e_test_dogshelter.db
+
+# azure
+.azure
