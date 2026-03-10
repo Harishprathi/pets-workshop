@@ -25,7 +25,7 @@ A **composite action** combines multiple *steps* into a single step that runs in
 | **Runner control** | Runs on the caller job's runner | Each job specifies its own runner |
 | **Secrets** | Cannot access secrets directly | Can receive secrets via `secrets:` or `secrets: inherit` |
 | **Logging** | Appears as one collapsed step in the log | Every job and step is logged individually |
-| **Nesting depth** | Up to 10 composite actions per workflow | Up to 10 levels of workflow nesting |
+| **Nesting depth** | Up to 10 composite actions per workflow | Up to 4 levels of workflow nesting |
 | **Marketplace** | Can be published to the [Actions Marketplace][actions-marketplace] | Cannot be published to the Marketplace |
 
 **When to use which:**
@@ -69,7 +69,7 @@ on:
         required: true
 ```
 
-Then caller then passes each secret explicitly:
+The caller then passes each secret explicitly:
 
 ```yaml
 deploy:
@@ -84,6 +84,8 @@ deploy:
 
 > [!IMPORTANT]
 > For deployment workflows that need Azure credentials, `secrets: inherit` is the simplest approach. However, defining specific secrets provides better documentation and prevents accidentally exposing secrets the reusable workflow doesn't need. We'll use `secrets: inherit` in this exercise for simplicity.
+>
+> Note: In this workshop, `azd pipeline config` stored the Azure credentials as **repository variables** (accessed via `vars.*`), not secrets. The example above illustrates the pattern for cases where credentials _are_ stored as secrets.
 
 ## Create a reusable deployment workflow
 
@@ -203,7 +205,7 @@ Now let's add the second caller — a manual deploy workflow for rollbacks and h
 
     This workflow is only triggered **manually** via `workflow_dispatch` — it appears as a "Run workflow" button in the Actions tab. It prompts for a **git ref** (a commit SHA, tag, or branch name to deploy), passes that ref to the reusable workflow's `deploy-ref` input, and uses the same deploy logic as the automated pipeline.
 
-3. In the terminal (<kbd>Ctl</kbd>+<kbd>`</kbd> to toggle), commit and push your changes:
+3. In the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd> to toggle), commit and push your changes:
 
     ```bash
     git add .github/workflows/reusable-deploy.yml .github/workflows/azure-dev.yml .github/workflows/manual-deploy.yml

@@ -30,7 +30,7 @@ There are several strategies for ensuring only validated code reaches production
 
 Let's set up the Azure Developer CLI and scaffold the infrastructure for our project.
 
-1. Open the terminal in your codespace (or press <kbd>Ctl</kbd>+<kbd>`</kbd> to toggle it).
+1. Open the terminal in your codespace (or press <kbd>Ctrl</kbd>+<kbd>`</kbd> to toggle it).
 2. Install azd by running:
 
     ```bash

@@ -101,7 +101,7 @@ The **`permissions`** block controls what this token can do. For our CI workflow
 
 A bit later you'll use a more standard branching approach for changes. But for our purposes right now, let's push straight to `main`. What you'll notice is the workflow will automatically run, since the workflow will now exist on `main`!
 
-1. Open the terminal in your codespace by pressing <kbd>Ctl</kbd>+<kbd>`</kbd>, then stage, commit, and push:
+1. Open the terminal in your codespace by pressing <kbd>Ctrl</kbd>+<kbd>`</kbd>, then stage, commit, and push:
 
     ```bash
     git add .github/workflows/run-tests.yml

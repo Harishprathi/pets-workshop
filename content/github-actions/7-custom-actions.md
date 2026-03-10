@@ -29,7 +29,7 @@ Inputs and outputs let the action communicate with the calling workflow, making 
 
 Let's create a composite action that sets up Python, installs dependencies, and seeds the test database.
 
-1. In your codespace, open a terminal window by selecting <kbd>Ctl</kbd>+<kbd>\`</kbd>.
+1. In your codespace, open a terminal window by selecting <kbd>Ctrl</kbd>+<kbd>\`</kbd>.
 2. Create the directory for the action by executing the following command in the terminal:
 
     ```bash
@@ -65,7 +65,7 @@ Let's create a composite action that sets up Python, installs dependencies, and 
           uses: actions/setup-python@v5
           with:
             python-version: ${{ inputs.python-version }}
-
+            cache: 'pip'
         - name: Install dependencies
           run: pip install -r app/server/requirements.txt
           shell: bash
@@ -214,7 +214,7 @@ Now let's update the CI workflow to use the custom action instead of the individ
               DATABASE_PATH: ${{ steps.seed.outputs.database-file }}
     ```
 
-6. In the terminal (<kbd>Ctl</kbd>+<kbd>`</kbd> to toggle), commit and push your changes:
+6. In the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd> to toggle), commit and push your changes:
 
     ```bash
     git add .github/actions/setup-python-env/action.yml .github/workflows/run-tests.yml
