@@ -65,7 +65,7 @@ And
 
 1. Review the code suggestions to ensure they behave the way you expect them to, making any necessary changes. Once you're satisfied, you can select **Keep** on the files individually or in Copilot Chat to accept all changes.
 2. Open the page at [http://localhost:4321][tailspin-shelter-website] to see the updates!
-3. Run the Python tests by using `python -m unittest` in the terminal as you did previously.
+3. Run the Python tests by running `python -m unittest` from the `app/server` directory in the terminal.
 4. If any changes are needed, explain the required updates to GitHub Copilot and allow it to generate the new code.
 
 > [!IMPORTANT]

@@ -32,7 +32,7 @@ In a few moments a new repository will be created from the template for this wor
 
 With the repository created, it's now time to clone the repository locally. We'll do this from a shell capable of running BASH commands.
 
-1. Copy the URL for the repository you just created in the prior set.
+1. Copy the URL for the repository you just created in the prior step.
 2. Open your terminal or command shell.
 3. Run the following command to clone the repository locally (changing directories to a parent directory as appropriate):
 

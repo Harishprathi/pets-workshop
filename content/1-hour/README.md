@@ -39,7 +39,7 @@ You will also need the following available and installed locally:
 - A shell capable of running BASH commands.
 
 > [!NOTE]
-> Linux and macOS are able to run BASH commands without additional configuration. For Windows, you will need either [Windows Subsystem for Linux (WS)][windows-subsystem-linux] or the BASH shell available via [git][git-link].
+> Linux and macOS are able to run BASH commands without additional configuration. For Windows, you will need either [Windows Subsystem for Linux (WSL)][windows-subsystem-linux] or the BASH shell available via [git][git-link].
 
 ## Getting started
 
