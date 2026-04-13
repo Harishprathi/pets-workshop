@@ -19,7 +19,8 @@ def create_app():
     # Get the server directory path (one level up from utils)
     server_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(server_dir, "dogshelter.db")}'
+    db_path = os.environ.get('DATABASE_PATH', os.path.join(server_dir, 'dogshelter.db'))
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{db_path}'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     
     # Initialize the database with the app

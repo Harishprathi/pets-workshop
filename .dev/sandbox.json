@@ -1,8 +1,0 @@
-{
-  "image_name": "pets-workshop-sandbox",
-  "watch_files": [
-    "app/client/package.json",
-    "app/client/package-lock.json",
-    "app/server/requirements.txt"
-  ]
-}

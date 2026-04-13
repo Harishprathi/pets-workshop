@@ -17,14 +17,14 @@ Let's create the repository you'll use for your workshop.
 1. Navigate to [the repository root](/)
 2. Select **Use this template** > **Create a new repository**
 
-    ![Screenshot of Use this template dropdown](images/0-setup-template.png)
+    ![Screenshot of Use this template dropdown](../shared-images/setup-use-template.png)
 
 3. Under **Owner**, select the name of your GitHub handle, or the owner specified by your workshop leader.
 4. Under **Repository**, set the name to **pets-workshop**, or the name specified by your workshop leader.
 5. Ensure **Public** is selected for the visibility, or the value indicated by your workshop leader.
 6. Select **Create repository from template**.
 
-    ![Screenshot of configured template creation dialog](images/0-setup-configure.png)
+    ![Screenshot of configured template creation dialog](../shared-images/setup-configure-repo.png)
 
 In a few moments a new repository will be created from the template for this workshop!
 
@@ -32,7 +32,7 @@ In a few moments a new repository will be created from the template for this wor
 
 With the repository created, it's now time to clone the repository locally. We'll do this from a shell capable of running BASH commands.
 
-1. Copy the URL for the repository you just created in the prior set.
+1. Copy the URL for the repository you just created in the prior step.
 2. Open your terminal or command shell.
 3. Run the following command to clone the repository locally (changing directories to a parent directory as appropriate):
 
@@ -51,19 +51,19 @@ With the repository created, it's now time to clone the repository locally. We'l
     - macOS / Linux:
 
         ```sh
-        ./scripts/start-app.sh
+        ./app/scripts/start-app.sh
         ```
 
     - Windows (PowerShell):
 
         ```powershell
-        ./scripts/start-app.ps1
+        ./app/scripts/start-app.ps1
         ```
 
     If you encounter execution policy warnings on Windows, run PowerShell as an administrator or execute the script with an explicit bypass, for example:
 
     ```powershell
-    powershell -ExecutionPolicy Bypass -File .\scripts\start-app.ps1
+    powershell -ExecutionPolicy Bypass -File .\app\scripts\start-app.ps1
     ```
 
 The startup script will start two applications:
