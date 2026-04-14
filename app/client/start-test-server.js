@@ -4,15 +4,16 @@ const path = require('path');
 
 const serverDir = path.resolve(__dirname, '..', 'server');
 const testDbPath = path.join(serverDir, 'e2e_test_dogshelter.db');
+const python = process.env.PYTHON || (process.platform === 'win32' ? 'py' : 'python3');
 
 // Seed the test database
-execSync('python3 utils/seed_test_database.py', {
+execSync(`${python} utils/seed_test_database.py`, {
   cwd: serverDir,
   stdio: 'inherit',
 });
 
 // Start Flask with the test database
-const server = spawn('python3', ['app.py'], {
+const server = spawn(python, ['app.py'], {
   cwd: serverDir,
   env: { ...process.env, DATABASE_PATH: testDbPath },
   stdio: 'inherit',
