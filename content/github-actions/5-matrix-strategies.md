@@ -44,7 +44,7 @@ Let's update the CI workflow to test the API across multiple Python versions.
             pip install -r app/server/requirements.txt
 
         - name: Run tests
-          working-directory: ./server
+          working-directory: ./app/server
           run: |
             python -m unittest test_app -v
     ```

@@ -73,7 +73,7 @@ Let's build that out!
               pip install -r app/server/requirements.txt
 
           - name: Run tests
-            working-directory: ./server
+            working-directory: ./app/server
             run: |
               python -m unittest test_app -v
     ```
@@ -141,15 +141,15 @@ The unit tests cover the API, but the shelter also has Playwright e2e tests that
               node-version: '20'
 
           - name: Install Node dependencies
-            working-directory: ./client
+            working-directory: ./app/client
             run: npm ci
 
           - name: Install Playwright browsers
-            working-directory: ./client
+            working-directory: ./app/client
             run: npx playwright install --with-deps chromium
 
           - name: Run e2e tests
-            working-directory: ./client
+            working-directory: ./app/client
             run: npx playwright test
     ```
 
