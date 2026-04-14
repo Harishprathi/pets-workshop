@@ -44,7 +44,7 @@ Let's update the CI workflow to test the API across multiple Python versions.
             pip install -r app/server/requirements.txt
 
         - name: Run tests
-          working-directory: ./app/server
+          working-directory: ./server
           run: |
             python -m unittest test_app -v
     ```
@@ -52,7 +52,7 @@ Let's update the CI workflow to test the API across multiple Python versions.
 > [!IMPORTANT]
 > Make sure to quote version numbers like `'3.12'` in the matrix array. Without quotes, YAML may interpret them as floating-point numbers — for example, `3.10` becomes `3.1`, which would cause the setup step to fail.
 
-5. In the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd> to toggle), stage, commit, and push your changes:
+5. In the terminal (<kbd>Ctl</kbd>+<kbd>`</kbd> to toggle), stage, commit, and push your changes:
 
     ```bash
     git add .github/workflows/run-tests.yml
@@ -126,6 +126,6 @@ Matrix strategies let you test across multiple configurations — language versi
 |:-----------------------------------|------------------------------------------:|
 
 [matrix-docs]: https://docs.github.com/actions/using-jobs/using-a-matrix-for-your-jobs
-[strategy-syntax]: https://docs.github.com/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idstrategy
+[strategy-syntax]: https://docs.github.com/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstrategy
 [walkthrough-previous]: 4-caching.md
 [walkthrough-next]: 6-deploy-azure.md

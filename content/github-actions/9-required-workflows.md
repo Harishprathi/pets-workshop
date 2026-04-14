@@ -94,7 +94,7 @@ Let's create a ruleset that requires our tests to pass, and pull requests to be 
 
 Let's verify the ruleset is working.
 
-1. Return to your codespace and open the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd> to toggle). Create a new branch and make a small change:
+1. Return to your codespace and open the terminal (<kbd>Ctl</kbd>+<kbd>`</kbd> to toggle). Create a new branch and make a small change:
 
     ```bash
     git checkout -b test-ruleset
@@ -146,7 +146,7 @@ This pipeline follows the same patterns used by teams across GitHub. As the shel
 
 If you want to keep exploring, here are some suggested next steps:
 
-- Add a custom CodeQL workflow using [GitHub Advanced Security][github-security].
+- Add a code scanning workflow using [GitHub Advanced Security][github-security].
 - Explore [GitHub Environments][environments-docs] with deployment protection rules for staged deployments (e.g., staging → production with manual approval).
 - Explore the [GitHub Actions Marketplace][actions-marketplace] for community-built actions.
 - Take the [GitHub Skills: Deploy to Azure][skills-deploy-azure] course for a deeper dive into Azure deployment.

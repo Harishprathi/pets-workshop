@@ -26,7 +26,7 @@ To complete this workshop, you will need the following:
 1. [Introduction & Your First Workflow][introduction] — Create your first workflow and explore the Actions UI
 2. [Securing the Development Pipeline][code-scanning] — Enable code scanning, Dependabot, and secret scanning
 3. [Running Tests][ci] — Automate unit and e2e testing with parallel jobs
-4. [Caching][caching] — Speed up workflows by caching dependencies
+4. [Caching][marketplace] — Speed up workflows by caching dependencies
 5. [Matrix strategies & parallel testing][matrix] — Test across multiple configurations simultaneously
 6. [Deploying to Azure with azd][deployment] — Set up continuous deployment to Azure
 7. [Creating custom actions][custom-actions] — Build your own reusable action
@@ -57,7 +57,7 @@ To complete this workshop, you will need the following:
 [github-copilot]: https://github.com/features/copilot
 [github-signup]: https://github.com/join
 [introduction]: ./1-introduction.md
-[caching]: ./4-caching.md
+[marketplace]: ./4-caching.md
 [matrix]: ./5-matrix-strategies.md
 [protection]: ./9-required-workflows.md
 [repo-root]: /

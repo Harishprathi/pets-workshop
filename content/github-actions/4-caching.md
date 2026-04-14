@@ -3,9 +3,9 @@
 | [← Running Tests][walkthrough-previous] | [Next: Matrix Strategies & Parallel Testing →][walkthrough-next] |
 |:-----------------------------------|------------------------------------------:|
 
-**Caching** is a technique to speed up your workflows by reusing previously downloaded dependencies instead of fetching them from the internet on every run. This exercise teaches you how to cache Python packages and Node modules so your CI pipeline stays fast as your project grows.
+The [GitHub Actions Marketplace][actions-marketplace] is a collection of pre-built actions created by GitHub and the community. Actions can set up tools, run tests, deploy code, send notifications, and much more. Rather than writing everything from scratch, you can leverage the work of thousands of developers.
 
-Along the way you'll also browse the [GitHub Actions Marketplace][actions-marketplace] — a collection of pre-built actions created by GitHub and the community that you can drop into any workflow.
+In this exercise you'll also learn about **caching** — a technique to speed up your workflows by reusing previously downloaded dependencies instead of fetching them from the internet on every run.
 
 ## Scenario
 
@@ -71,7 +71,7 @@ The e2e job has two dependencies to cache — Python packages and the Node modul
 
 Now let's push the changes and see the impact of caching.
 
-1. In the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd> to toggle), stage, commit, and push your changes:
+1. In the terminal (<kbd>Ctl</kbd>+<kbd>`</kbd> to toggle), stage, commit, and push your changes:
 
     ```bash
     git add .github/workflows/run-tests.yml

@@ -68,7 +68,7 @@ Let's start with the classic "Hello World" — a workflow you can trigger manual
 
 Now let's push the workflow and trigger it by hand.
 
-1. Open the terminal in your codespace by pressing <kbd>Ctrl</kbd>+<kbd>`</kbd>.
+1. Open the terminal in your codespace by pressing <kbd>Ctl</kbd>+<kbd>`</kbd>.
 2. Stage and commit your changes:
 
     ```bash
