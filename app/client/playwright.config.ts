@@ -27,13 +27,13 @@ export default defineConfig({
   ],
   webServer: [
     {
-      command: `cd ${serverDir} && python3 utils/seed_test_database.py && DATABASE_PATH=${testDbPath} python3 app.py`,
+      command: `node start-test-server.js`,
       url: `http://localhost:${flaskPort}/api/dogs`,
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: false,
       timeout: 30_000,
     },
     {
-      command: `API_SERVER_URL=http://localhost:${flaskPort} npm run dev -- --no-clearScreen`,
+      command: `npx cross-env API_SERVER_URL=http://localhost:${flaskPort} npm run dev -- --no-clearScreen`,
       url: `http://localhost:${astroDevPort}`,
       reuseExistingServer: !process.env.CI,
       timeout: 30_000,

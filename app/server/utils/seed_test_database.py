@@ -125,9 +125,6 @@ def seed_test_database():
     init_db(app)
 
     with app.app_context():
-        # Create all tables
-        db.create_all()
-
         # Seed breeds
         breed_map = {}
         for breed_data in TEST_BREEDS:
