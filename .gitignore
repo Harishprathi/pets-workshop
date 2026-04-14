@@ -40,6 +40,12 @@ flask_session/
 htmlcov/
 
 # playwright
-client/test-results/
-client/playwright-report/
+app/client/test-results/
+app/client/playwright-report/
+.playwright-mcp/
+
+# e2e test database
+app/server/e2e_test_dogshelter.db
+
+# azure
 .azure
