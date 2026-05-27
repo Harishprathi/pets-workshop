@@ -2,12 +2,21 @@
 
 ## Table of Contents
 
+Harish 
+
+Aparna 
+
+Rambabu 
+
+Janaki
+
+
 1. [Next Steps](#next-steps)
    1. [Provision infrastructure](#provision-infrastructure-and-deploy-application-code)
    2. [Modify infrastructure](#modify-infrastructure)
    3. [Getting to production-ready](#getting-to-production-ready)
 2. [Billing](#billing)
-3. [Troubleshooting](#troubleshooting)
+
 
 ## Next Steps
 
